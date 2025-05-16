@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
 {% block miCSS %}{% endblock %}
 {% block titulo %}Admin{% endblock %}
-{% block cuerpo %}Bienvenido a la pagina de admin{% endblock %}
+{% block cuerpo %}Bienvenido <h1>{{ current_user.fullname }}</h1>
+<a class="btn btn-danger" href="{{ url_for('logout') }}" >LogOut</a>{% endblock %}
